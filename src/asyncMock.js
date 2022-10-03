@@ -14,8 +14,8 @@ const products = [
     { id: '5', name: 'Pantalon Chicago Pink', price: 16000, category: 'pantalones', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/b14c3cef-ddbc-424f-9ebf-0e6073b60994-453b829ea4d8a96d9916515911692800-1024-1024.jpg', stock: 10, description:'Descripcion de Pantalon Chicago'},
     { id: '6', name: 'Jeans KOTK Black', price: 16000, category: 'pantalones', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/ad74e634-86cd-447c-a7ed-e5d88baa224a-bf4285dc54b4c7498016565357777839-1024-1024.jpg', stock: 10, description:'Descripcion de Jeans KOTK Black'},
     { id: '7', name: 'Camisa Not a Brand Blue', price: 16000, category: 'camisas', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/05631146-7212-41c2-92bf-7eb137d1ab74-336ad99548e94bc6da16585900033856-480-0.jpg', stock: 10, description:'Descripcion de Camisa Not a Brand'},
-    { id: '8', name: 'Camisa Oversize Scotish', price: 16000, category: 'pantalones', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/6b590859-16a5-4d15-81cd-184f86128d0b-37105672671386124416515917977698-480-0.jpg', stock: 10, description:'Descripcion de camisa oversize scotish'},
-    { id: '9', name: 'Camisa Not a Brand Mustard', price: 16000, category: 'pantalones', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/b0bb6bd3-962a-493d-af99-aef5fca8a5b9-b69a1edb648c1f894516536120969522-480-0.jpg', stock: 10, description:'Descripcion de camisa Not a Brand Mustard'}
+    { id: '8', name: 'Camisa Oversize Scotish', price: 16000, category: 'camisas', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/6b590859-16a5-4d15-81cd-184f86128d0b-37105672671386124416515917977698-480-0.jpg', stock: 10, description:'Descripcion de camisa oversize scotish'},
+    { id: '9', name: 'Camisa Not a Brand Mustard', price: 16000, category: 'camisas', img:'https://d3ugyf2ht6aenh.cloudfront.net/stores/219/431/products/b0bb6bd3-962a-493d-af99-aef5fca8a5b9-b69a1edb648c1f894516536120969522-480-0.jpg', stock: 10, description:'Descripcion de camisa Not a Brand Mustard'}
 ]
 
 

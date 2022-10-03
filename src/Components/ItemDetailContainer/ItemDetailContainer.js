@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import { getProduct } from "../../asyncMock"
 import { useParams } from "react-router-dom"
-import Counter from "../Counter/Counter"
+import { Oval } from  'react-loader-spinner'
+import ItemDetail from "../ItemDetail/ItemDetail"
+
 
 const ItemDetailContainer = () =>{
 
@@ -19,21 +21,25 @@ const ItemDetailContainer = () =>{
 
     if(loading){
         return(
-            <div>
-                <h1>Loading...</h1>
+            <div className='loading'>
+                <Oval 
+                    height={80}
+                    width={80}
+                    color="#000000"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    ariaLabel='oval-loading'
+                    secondaryColor="gray"
+                    strokeWidth={2}
+                    strokeWidthSecondary={2}/>
             </div>
         )
     }
     return(
-        <div>
-            <h1>Detalle de Producto</h1>
-            <h1 className='tituloCard'>{product.name}</h1>
-                <img src={product.img} alt="product.name" className='imgProducto'/>
-                <p className='datosCard'>{product.description}</p>
-                <p className='datosCard'>Precio: {product.price}</p>
-                <p className='datosCard'>Stock: {product.stock}</p>
-                <Counter stock={product.stock}/>
-                <button className='buttonDetail'>Comprar</button>
+        <div className="cardProducto">
+            <h1 className="tituloPresentacion">Detalle de Producto</h1>
+            <ItemDetail product={product}/>
         </div>
     )
 }

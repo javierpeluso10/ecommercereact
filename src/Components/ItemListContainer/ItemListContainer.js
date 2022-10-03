@@ -3,6 +3,8 @@ import { getProducts } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import './ItemListContainer.css'
+import { Oval } from  'react-loader-spinner'
+
 
 const ItemListContainer = () =>{
 
@@ -22,15 +24,25 @@ const ItemListContainer = () =>{
 
     if(loading){
         return(
-            <div>
-                <h1>Loading...</h1>
+            <div className='loading'>
+                <Oval 
+                    height={80}
+                    width={80}
+                    color="#000000"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+                    ariaLabel='oval-loading'
+                    secondaryColor="gray"
+                    strokeWidth={2}
+                    strokeWidthSecondary={2}/>
             </div>
         )
     }
 
     return(
     <div>
-        <h1>Todos Nuestros productos</h1>
+        <h1 className='tituloPresentacion'>Todos Nuestros productos</h1>
         <ItemList products={products}/>
     </div>
 )

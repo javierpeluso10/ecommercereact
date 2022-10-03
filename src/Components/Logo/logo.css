@@ -1,0 +1,14 @@
+.containerLogo{
+    display: flex;
+    margin-bottom: -55px;
+    margin-left: 10px;
+}
+
+.logo{
+    width: 50px;
+}
+
+.tituloApp{
+    margin: 10px 0 0 10px;
+    text-align: center;
+}

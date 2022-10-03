@@ -1,0 +1,54 @@
+.contenedorProducto{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-around;
+    margin: 50px auto;
+}
+
+.imgProducto{
+    width: 400px;
+    margin: auto;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.buttonDetail{
+    background-color: black;
+    color: white;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 1000;
+    margin: 10px 0;
+}
+
+.buttonDetail:hover{
+    cursor: pointer;
+    transition: .3s ease-in;
+    background-color: gray;
+    color: black;
+}
+
+.buttonDetail2{
+    background-color: black;
+    color: white;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 1000;
+    width: 50px;
+}
+
+.datosCard{
+    margin: 7px 0 ;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.tituloCard{
+    text-align: center;
+    margin-bottom: 30px;
+}

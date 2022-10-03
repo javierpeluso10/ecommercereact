@@ -27,7 +27,7 @@
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    width: 395px;
+    width: 400px;
 }
 
 .buttonDetail:hover{
@@ -38,8 +38,7 @@
 }
 
 .buttonDetail2{
-    background-color: black;
-    color: white;
+    color: rgb(0, 0, 0);
     height: 50px;
     font-size: 1rem;
     font-weight: 1000;
@@ -52,6 +51,9 @@
     font-weight: 800;
 }
 
+p.datosCard{
+    margin-top: 15px;
+}
 .tituloCard{
     text-align: center;
     margin-bottom: 30px;
@@ -75,4 +77,10 @@
     justify-content: center;
     align-items: center;
     height: 90vh;
+}
+
+.contenedorBotones{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(191, 189, 189);
 }

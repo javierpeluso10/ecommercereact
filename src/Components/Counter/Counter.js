@@ -17,10 +17,10 @@ const Counter = ({stock}) =>{
     }
 
     return(
-        <div>
-            <button onClick={aumentarCantidad} className='buttonDetail2'>+</button>
-            <p className='datosCard'>Seleccione Cantidad: {count}</p>
+        <div className='contenedorBotones'>
             <button onClick={bajarCantidad} className='buttonDetail2'>-</button>
+            <p className='datosCard'>Seleccione Cantidad: {count}</p>
+            <button onClick={aumentarCantidad} className='buttonDetail2'>+</button>
         </div>
     )
 }

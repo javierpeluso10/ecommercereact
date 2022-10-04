@@ -23,7 +23,7 @@
     height: 50px;
     font-size: 1rem;
     font-weight: 1000;
-    margin: 10px 0;
+    margin-top: 10px;
     text-decoration: none;
     text-align: center;
     line-height: 50px;
@@ -82,5 +82,11 @@ p.datosCard{
 .contenedorBotones{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(191, 189, 189);
+    /* background-color: rgb(191, 189, 189); */
+    flex-direction: column;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
 }

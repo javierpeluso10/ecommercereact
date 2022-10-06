@@ -5,7 +5,7 @@ import { Oval } from  'react-loader-spinner'
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
-const ItemDetailContainer = () =>{
+const ItemDetailContainer = ({setCart}) =>{
 
     const [product, setProduct] = useState({})
     const [loading, setLoading] = useState(true)
@@ -39,7 +39,7 @@ const ItemDetailContainer = () =>{
     return(
         <div className="cardProducto">
             <h1 className="tituloPresentacion">Detalle de Producto</h1>
-            <ItemDetail product={product}/>
+            <ItemDetail {...product} setCart={setCart}/>
         </div>
     )
 }

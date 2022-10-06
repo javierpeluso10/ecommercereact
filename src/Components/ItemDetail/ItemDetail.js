@@ -1,26 +1,30 @@
 import Counter from "../Counter/Counter"
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from '../../Context/CartContext'
 import './ItemDetail.css'
 
-const ItemDetail = ({product}) =>{
+const ItemDetail = ({id, name, img, category, description, price, stock}) =>{
     const [quantityToAdd, setQuantityToAdd] = useState(0)
-    console.log(quantityToAdd)
+    const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
-        console.log('agregue al carrito')
-        console.log(quantity)
         setQuantityToAdd(quantity)
+
+        const productToAdd ={
+            id, name, price, quantity
+        }
+        addItem(productToAdd)
     }
 
     return(
         <div>
-            <h1 className='tituloCard'>{product.name}</h1>
-            <img src={product.img} alt="product.name" className='imgProducto'/>
-            <p className='datosCard'>{product.description}</p>
-            <p className='datosCard'>Precio: $ {product.price}</p>
-            <p className='datosCard'>Stock: {product.stock}</p>
-            {quantityToAdd === 0 ? (<Counter onConfirm={handleOnAdd} stock={product.stock}/>) : (<Link to='/cart' className='buttonFinish'>Finalizar compra</Link>)}
+            <h1 className='tituloCard'>{name}</h1>
+            <img src={img} alt="product.name" className='imgProducto'/>
+            <p className='datosCard'>{description}</p>
+            <p className='datosCard'>Precio: $ {price}</p>
+            <p className='datosCard'>Stock: {stock}</p>
+            {quantityToAdd === 0 ? (<Counter onConfirm={handleOnAdd} stock={stock}/>) : (<Link to='/cart' className='buttonFinish'>Finalizar compra</Link>)}
         </div>
     )
 }

@@ -90,3 +90,11 @@ p.datosCard{
     display: flex;
     justify-content: space-between;
 }
+
+.CartWidget{
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 40px;
+    color: black;
+    font-weight: 1000;
+}

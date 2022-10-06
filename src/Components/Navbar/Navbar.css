@@ -6,7 +6,7 @@
 
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cartWidget{
@@ -17,6 +17,7 @@
 
 .logoContainer{
     display: flex;
+    justify-content: center;
 }
 
 .containerLogo{
@@ -31,8 +32,8 @@
 
 .navMenu{
     display: flex;
-    justify-content: center;
     margin-top: 20px;
+    margin-right: 160px;
 }
 
 .buttonNavbar{
@@ -58,7 +59,6 @@
 
 .shopCart{
     width: 50px;
-    margin-right: 10px;
 }
 .shopCart:hover{
     cursor: pointer;

@@ -22,7 +22,7 @@ const Navbar = () =>{
         })
     },[])
 
-
+    
     return(
     <header className="header">
         <div className='logoContainer'>

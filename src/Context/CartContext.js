@@ -10,7 +10,18 @@ export const CartContextProvider = ({ children }) => {
         if(!isInCart(productToAdd.id)) {
         setCart([...cart, productToAdd])
         } else {
-        console.log('ya esta agregado')
+            const cartActualizado = cart.map(prod => {
+                if(prod.id === productToAdd.id){
+                    const productActualizado = {
+                        ...prod,
+                        quantity: productToAdd.quantity
+                    }
+                    return productActualizado
+                } else {
+                    return prod
+                }
+            })
+            setCart(cartActualizado)
         }
     }
     
@@ -33,7 +44,6 @@ export const CartContextProvider = ({ children }) => {
         return totalQuantity
     }
     
-
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, getTotalQuantity }}>
             {children}

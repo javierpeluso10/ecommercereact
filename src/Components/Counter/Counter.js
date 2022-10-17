@@ -1,8 +1,8 @@
 import {useState} from 'react'
 
 
-const Counter = ({onConfirm, stock}) =>{
-    const [count, setCount] = useState (0)
+const Counter = ({onConfirm, stock = 0, initial = 1}) =>{
+    const [count, setCount] = useState (initial)
 
     const aumentarCantidad = () =>{
         if(count < stock){

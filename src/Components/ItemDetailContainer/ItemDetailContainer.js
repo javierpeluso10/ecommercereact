@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import { getProduct } from "../../asyncMock"
 import { useParams } from "react-router-dom"
 import { Oval } from  'react-loader-spinner'
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from "../../services/firebase"
 import ItemDetail from "../ItemDetail/ItemDetail"
-
 
 const ItemDetailContainer = ({setCart}) =>{
 
@@ -12,12 +12,18 @@ const ItemDetailContainer = ({setCart}) =>{
     const { productId } = useParams()
 
     useEffect(()=>{
-        getProduct(productId).then(product => {
-            setProduct(product)
+
+        const docRef = doc(db, 'products', productId )
+        getDoc(docRef).then(doc => {
+            const data = doc.data()
+            const productAdapted = {id: doc.id, ...data}
+            
+            setProduct(productAdapted)
+        }).catch(error =>{
+            console.log('error')
         }).finally(()=>{
-            setLoading(false)
-        })
-    },[])
+            setLoading(false)})
+    },[productId])
 
     if(loading){
         return(

@@ -1,10 +1,10 @@
-.cart{
+.Button {
+    background-color: black;
+    color: white;
+    height: 35px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items:center;
-    height: 90vh;
-}
-
-.cartTitle{
-    font-size: 3rem;
+    align-items: center;
+    margin: auto;
 }

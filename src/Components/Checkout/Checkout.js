@@ -3,6 +3,7 @@ import { CartContext } from "../../Context/CartContext"
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from 'firebase/firestore'
 import { Oval } from  'react-loader-spinner'
 import { db } from '../../services/firebase'
+import Form from '../Form/Form'
 
 
 const Checkout = () =>{
@@ -15,9 +16,10 @@ const Checkout = () =>{
 
         const objOrder = {
             buyer: {
-                name: 'Javier Peluso',
-                phone: '123456789',
-                email: 'javee@gmail.com'
+                nombre: `${nombre}`,
+                apellido: `${apellido}`,
+                email: `${email}`,
+                dni: `${dni}`
             } ,
             items: cart,
             total
@@ -66,7 +68,7 @@ const Checkout = () =>{
 if(loading){
     return <div>
         <h1>Su orden se esta generando</h1>
-        <div className='loading'>
+        <div className='loading2'>
         <Oval 
             height={80}
             width={80}
@@ -84,8 +86,9 @@ if(loading){
 
     return(
         <>
-        <h1> Titulo Checkout </h1>
-        <button onClick={crearOrden}>Agregar Documento</button>
+        <h1> Complete sus Datos </h1>
+        <Form/>
+        <button onClick={crearOrden}>Enviar</button>
         </>
     )
 }

@@ -38,13 +38,13 @@ export const CartContextProvider = ({ children }) => {
     useEffect(() => {
         const totalQuantity = getTotalQuantity()
         setTotalQuantity(totalQuantity)
-    }, [cart]) //cart
+    }, [cart]) 
 
     useEffect(() => {
         const total = getTotal()
         setTotal(total)
-    }, [cart]) //cart
-
+    }, [cart]) 
+    
     const getTotalQuantity = () => {
         let totalQuantity = 0
 

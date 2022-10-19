@@ -79,6 +79,13 @@ p.datosCard{
     height: 90vh;
 }
 
+.loading2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .contenedorBotones{
     display: flex;
     justify-content: space-between;

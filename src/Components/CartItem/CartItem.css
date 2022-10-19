@@ -1,56 +1,50 @@
 .CardCartItem {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: auto;
-    padding: 20px;
     margin: 30px;
     font-size: 10px;
-    background-color: rgb(80, 80, 79);
+    background-color: rgb(194, 194, 194);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
 }
 
-.InfoCartItem {
-    margin-right: 50px;
-}
-
 .ContainerItemCartItem {
     display: flex;
-    justify-content: space-between;
 }
 
 .ItemHeaderCartItem {
     display: flex;
     justify-content: space-between;
+    line-height: 50px;
 }
 
 .InfoCartItem {
-    font-size: 12px;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
+    font-weight: 500;
+    margin-right: 50px;
+    line-height: 50px;
 }
 
 .ButtonCartItem {
-    width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #000000;
+    background-color: black;
+    color: white;
+    font-weight: 600;
     border-radius: 8px;
-    flex: none;
-    display: flex;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #ffffff;
-    border: none;
-    border-style: none;
+    width: 80px;
+    height: 40px;
+    margin: auto ;
     cursor: pointer;
-    outline: inherit;
 }
 
 .ItemFooterCartItem {
     display: flex;
+}
+
+h3{
+    text-align: center;
+    margin: 50px 0;
+    font-size: 2rem;
 }

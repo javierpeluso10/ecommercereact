@@ -3,12 +3,16 @@ import { CartContext } from "../../Context/CartContext"
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from 'firebase/firestore'
 import { Oval } from  'react-loader-spinner'
 import { db } from '../../services/firebase'
-import Form from '../Form/Form'
 
 
 const Checkout = () =>{
     const [loading, setLoading] = useState(false)
     const {cart, total, clearCart} = useContext(CartContext)
+
+    const [nombre, setNombre] = useState('')
+    const [apellido, setApellido] = useState('')
+    const [dni, setDni] = useState('')
+    const [email, setEmail] = useState('')
 
     const crearOrden = async () =>{
         setLoading(true)
@@ -87,7 +91,35 @@ if(loading){
     return(
         <>
         <h1> Complete sus Datos </h1>
-        <Form/>
+        <form className='form'>
+                <input
+                name='nombre'
+                className='formInput' 
+                value={nombre} 
+                placeholder='nombre' 
+                onChange={(e) => setNombre(e.target.value)}/>
+                <input 
+                name='apellido'
+                className='formInput' 
+                value={apellido}  
+                placeholder='apellido' 
+                onChange={(e) => setApellido(e.target.value)}/>
+                <input
+                name='email' 
+                className='formInput' 
+                value={email} 
+                placeholder='email' 
+                type='email'
+                onChange={(e) => setEmail(e.target.value)}/>
+                <input
+                name='dni'
+                className='formInput' 
+                min='7000000' 
+                max='99999999' 
+                value={dni} 
+                placeholder='dni' 
+                type='number'onChange={(e) => setDni(e.target.value)}/>
+            </form>
         <button onClick={crearOrden}>Enviar</button>
         </>
     )

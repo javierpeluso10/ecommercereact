@@ -119,7 +119,7 @@ if(loading){
                 value={dni} 
                 placeholder='DNI' 
                 type='number'onChange={(e) => setDni(e.target.value)}/>
-            </form>
+        </form>
         <div className="buttonContainer">
             <button onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
         </div>

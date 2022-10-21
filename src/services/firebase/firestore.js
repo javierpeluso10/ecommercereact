@@ -1,4 +1,4 @@
-import {getDocs, collection, query, where} from "firebase/firestore"
+import {getDocs, collection, query, where, getDoc, doc} from "firebase/firestore"
 import { db } from "."
 
 export const getProducts = (categoryId) =>{
@@ -18,10 +18,18 @@ export const getProducts = (categoryId) =>{
 }
 
 export const getProductsById = (productId) =>{
-
+    return new Promise((resolve, reject)=>{
+        const docRef = doc(db, 'products', productId )
+        getDoc(docRef).then(doc => {
+            const data = doc.data()
+            const productAdapted = {id: doc.id, ...data}
+            resolve(productAdapted)
+        }).catch(error =>{
+            reject(error)
+        })
+    })
 }
 
 export const createOrder = () =>{
 
-    
 }

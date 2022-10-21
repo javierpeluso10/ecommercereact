@@ -3,7 +3,7 @@ import { CartContext } from "../../Context/CartContext"
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from 'firebase/firestore'
 import { Oval } from  'react-loader-spinner'
 import { db } from '../../services/firebase'
-
+import './Checkout.css'
 
 const Checkout = () =>{
     const [loading, setLoading] = useState(false)
@@ -96,19 +96,19 @@ if(loading){
                 name='nombre'
                 className='formInput' 
                 value={nombre} 
-                placeholder='nombre' 
+                placeholder='Nombre' 
                 onChange={(e) => setNombre(e.target.value)}/>
                 <input 
                 name='apellido'
                 className='formInput' 
                 value={apellido}  
-                placeholder='apellido' 
+                placeholder='Apellido' 
                 onChange={(e) => setApellido(e.target.value)}/>
                 <input
                 name='email' 
                 className='formInput' 
                 value={email} 
-                placeholder='email' 
+                placeholder='Email' 
                 type='email'
                 onChange={(e) => setEmail(e.target.value)}/>
                 <input
@@ -117,10 +117,12 @@ if(loading){
                 min='7000000' 
                 max='99999999' 
                 value={dni} 
-                placeholder='dni' 
+                placeholder='DNI' 
                 type='number'onChange={(e) => setDni(e.target.value)}/>
             </form>
-        <button onClick={crearOrden}>Enviar</button>
+        <div className="buttonContainer">
+            <button onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
+        </div>
         </>
     )
 }

@@ -18,7 +18,7 @@ export const getProducts = (categoryId) =>{
 }
 
 export const getProductsById = (productId) =>{
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve, reject) =>{
         const docRef = doc(db, 'products', productId )
         getDoc(docRef).then(doc => {
             const data = doc.data()
@@ -28,8 +28,4 @@ export const getProductsById = (productId) =>{
             reject(error)
         })
     })
-}
-
-export const createOrder = () =>{
-
 }

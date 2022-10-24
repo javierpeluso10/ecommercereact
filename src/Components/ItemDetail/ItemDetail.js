@@ -24,7 +24,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock}) =>{
             <p className='datosCard'>{description}</p>
             <p className='datosCard'>Precio: $ {price}</p>
             <p className='datosCard'>Stock: {stock}</p>
-            {quantityToAdd === 0 ? (<Counter onConfirm={handleOnAdd} stock={stock}/>) : (<Link to='/cart' className='buttonFinish'>Finalizar compra</Link>)}
+            {quantityToAdd === 0 ? (<Counter onConfirm={handleOnAdd} stock={stock}/>) : (<Link to='/cart' className='buttonFinish'>Continuar Compra</Link>)}
         </div>
     )
 }

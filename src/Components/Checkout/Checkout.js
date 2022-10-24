@@ -3,11 +3,14 @@ import { CartContext } from "../../Context/CartContext"
 import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from 'firebase/firestore'
 import { Oval } from  'react-loader-spinner'
 import { db } from '../../services/firebase'
+import Swal from "sweetalert2"
+import withReactContent from "sweetalert2-react-content"
 import './Checkout.css'
 
 const Checkout = () =>{
     const [loading, setLoading] = useState(false)
     const {cart, total, clearCart} = useContext(CartContext)
+    const MySwal = withReactContent(Swal)
 
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
@@ -54,14 +57,20 @@ const Checkout = () =>{
 
         if(outOfStock.length === 0){
             await batch.commit()
-
             const orderRef = collection(db, 'orders')
             const orderAdded = await addDoc(orderRef, objOrder)
-
-            console.log(`El id de ordern es: ${orderAdded.id}`)
+            Swal.fire(
+                'Su orden se ha realizado con exito',
+                '',
+                'success'
+            )
             clearCart()
         } else {
-            console.log('Hay productos fuera de stock')
+            Swal.fire(
+                'Hay productos que estan fuera de stock',
+                '',
+                'error'
+            )
         }
     } catch (error){
         console.log(error)

@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Proyecto final del curso Reactjs de [Coder House](https://www.coderhouse.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Repositorio](https://github.com/javierpeluso10/ecommercereact)
 
-## Available Scripts
+**Profesor**: Sebastian Zuviria
 
-In the project directory, you can run:
+**Alumno**: Javier Peluso
 
-### `npm start`
+[*Creado con create-react-app*](https://create-react-app.dev/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tipo del aplicativo web: ecommerce
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Dependencias utilizadas (ver en [package.json](https://github.com/javierpeluso10/ecommercereact/blob/main/package.json) )
 
-### `npm test`
+### Iniciar el proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Ten en cuenta que este proyecto utiliza una *Cloud Firestore* de [Google Firebase](https://firebase.google.com/) y los datos de acceso no están incluidos en el repositorio 
 
-### `npm run build`
+La base de firestore se utiliza tanto para traer la información de los productos y las categorias al aplicativo, como para generar ordenes de compra desde el aplicativo. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para simular este comportamiento es necesario crear un nuevo Project dentro de firebase que se titule ```coderhouse-ecommerce``` y agregar una web app al mismo dentro de la configuración de firebase (guarda los datos de configuración, los vamos a utilizar más adelante)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El proyecto debe contener dos colecciones: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**products**  ```{ category: 'camisas', description: 'Descripcion de camisa', img: '', name:'nombre camisa', price: 'precio camisa en number', stock: 'valor en number'  }```
 
-### `npm run eject`
+**categories** ```{ label: 'Camisas', order: '1', slug:'camisas'  }``` 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Descargá o clona el repositorio
+2. Creá un nuevo proyecto en firebase con las indicaciones e información mencionada anteriormente
+3. Remplaza los datos de configuración en el archivo  [firebase.js](https://github.com/javierpeluso10/ecommercereact/blob/main/src/services/firebase/index.js) con los datos que te administra firebase
+4. Si no tenes instalado [nodejs](https://nodejs.org/), descargalo e instalalo
+5. Instala create-react-app, abre la consola y tipea ```npm install``` 
+6. Esperá que las dependencias mencionadas anteriormente se instalen correctamente 
+7. En la misma consola ejecuta ```npm start```
+8. Espera que se compile y luego se abrirá el aplicativo en tu explorador predeterminado
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Este aplicativo web es una simulación, por lo tanto la información proporcionada **no debe** ser considerada como real, tanto los precios, como la disponibilidad de stock han sido inventados para este proyecto. Es recomendable no proporcionar información real a la hora de completar el formulario de compra. Dicho formulario es parte de la simulación y no un compromiso de compra o reserva. Los articulos proporcionados por este aplicativo no están disponibles.*

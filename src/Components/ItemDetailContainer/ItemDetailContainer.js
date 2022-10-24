@@ -6,7 +6,7 @@ import { getProductsById } from '../../services/firebase/firestore'
 
 const ItemDetailContainer = ({setCart}) =>{
     const { productId } = useParams()
-    const {data: product, error, loading} = useAsync(()=>getProductsById(productId), [productId])
+    const {data: product, error, loading} = useAsync(() => getProductsById(productId), [productId])
 
     if(loading){
         return(

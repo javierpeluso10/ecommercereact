@@ -6,7 +6,7 @@
 
 **Alumno**: Javier Peluso
 
-[*Creado con create-react-app*](https://create-react-app.dev/)
+[*Creado con create-react-app*](https://es.reactjs.org/)
 
 ### Tipo del aplicativo web: ecommerce
 

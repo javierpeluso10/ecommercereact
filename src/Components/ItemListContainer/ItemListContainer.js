@@ -7,7 +7,7 @@ import { useAsync } from '../../hooks/useAsync'
 
 const ItemListContainer = () =>{
     const {categoryId} = useParams()
-    const {data: products, error, loading} = useAsync(()=>getProducts(categoryId), [categoryId])
+    const {data: products, error, loading} = useAsync(() => getProducts(categoryId), [categoryId])
 
     if(loading){
         return(

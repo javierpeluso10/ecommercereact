@@ -61,7 +61,7 @@ const Checkout = () =>{
             const orderAdded = await addDoc(orderRef, objOrder)
             Swal.fire(
                 'Su orden se ha realizado con exito',
-                '',
+                `el id de su orden es ${orderAdded.id}`,
                 'success'
             )
             clearCart()
@@ -101,17 +101,19 @@ if(loading){
         <>
         <h1> Complete sus Datos </h1>
         <form className='form'>
-                <input
+                <input 
                 name='nombre'
                 className='formInput' 
                 value={nombre} 
                 placeholder='Nombre' 
-                onChange={(e) => setNombre(e.target.value)}/>
+                required="required"
+                onChange={(e) => setNombre(e.target.value)} />
                 <input 
                 name='apellido'
                 className='formInput' 
                 value={apellido}  
                 placeholder='Apellido' 
+                required="required"
                 onChange={(e) => setApellido(e.target.value)}/>
                 <input
                 name='email' 
@@ -119,6 +121,7 @@ if(loading){
                 value={email} 
                 placeholder='Email' 
                 type='email'
+                required="required"
                 onChange={(e) => setEmail(e.target.value)}/>
                 <input
                 name='dni'
@@ -127,11 +130,10 @@ if(loading){
                 max='99999999' 
                 value={dni} 
                 placeholder='DNI' 
+                required="required"
                 type='number'onChange={(e) => setDni(e.target.value)}/>
+                <button onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
         </form>
-        <div className="buttonContainer">
-            <button onClick={crearOrden} className='buttonOrder' >Generar Orden</button>
-        </div>
         </>
     )
 }

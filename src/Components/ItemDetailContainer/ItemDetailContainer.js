@@ -4,8 +4,10 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useAsync } from '../../hooks/useAsync'
 import { getProductsById } from '../../services/firebase/firestore'
 
+
 const ItemDetailContainer = ({setCart}) =>{
     const { productId } = useParams()
+
     const {data: product, error, loading} = useAsync(() => getProductsById(productId), [productId])
 
     if(loading){

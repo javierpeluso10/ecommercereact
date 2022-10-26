@@ -5,7 +5,7 @@ export const useAsync = (asyncFunc, dependencies = []) =>{
     const [error, setError] = useState()
     const [loading, setLoading] = useState(true)
     
-    if(Array.isArray(dependencies)){
+    if(!Array.isArray(dependencies)){
         dependencies = []
     }
 

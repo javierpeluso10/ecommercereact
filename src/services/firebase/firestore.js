@@ -1,6 +1,7 @@
 import {getDocs, collection, query, where, getDoc, doc} from "firebase/firestore"
 import { db } from "."
 
+
 export const getProducts = (categoryId) =>{
     return new Promise((resolve, reject) =>{
         const collectionRef = categoryId ? query(collection(db, 'products'), where('category', '==', categoryId) ) : collection(db, 'products')

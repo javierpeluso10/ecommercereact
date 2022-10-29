@@ -37,4 +37,6 @@ El proyecto debe contener dos colecciones:
 
 *Este aplicativo web es una simulación, por lo tanto la información proporcionada **no debe** ser considerada como real, tanto los precios, como la disponibilidad de stock han sido inventados para este proyecto. Es recomendable no proporcionar información real a la hora de completar el formulario de compra. Dicho formulario es parte de la simulación y no un compromiso de compra o reserva. Los articulos proporcionados por este aplicativo no están disponibles.*
 
+
+### Video de Navegabilidad: https://drive.google.com/file/d/1FGO7poJoD-oF6b1V48VZf-H97S4BTkoD/view?usp=share_link
 ### Deploy: https://ecommercereact-jvxe28li8-javierpeluso10.vercel.app/
